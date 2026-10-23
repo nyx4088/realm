@@ -84,3 +84,20 @@ A prebuilt copy also lives in the StampQuest site at
 `philately-passport/site/realm/` (relative-base build), linked from
 Settings, About this app, "Enter The Realm". It is not pushed live until
 you say ship.
+
+## v2 render upgrade (Oct 23)
+
+- Lighting: HemisphereLight (sky #BFE3D8 / ground #3E5A3A, 0.8) plus a teal
+  ambient floor (#2E4A5A). Nothing renders pure black. Soft PCF sun shadows.
+- Terrain: noise-displaced rolling ground with vertex-colour gradients and
+  baked AO in the dips, a winding dirt path the whole length of the world,
+  instanced grass tufts, ferns, clover, flowers, mossy rocks and logs.
+- Trees: broadleaf canopies of clustered blobs in layered greens (lit tops,
+  dark undersides), pines, and giant ancient trees with roots and vines.
+- Golem rebuilt as ~900 stacked stone chunks (instanced) with cracks, moss
+  mound, hanging vines, flowers and shoulder trees. Spawn is on the path,
+  about 105 m out, facing it, sightline kept clear of trees.
+- Look: pixel size 3, saturation and warm-gold/teal-shadow grade, ordered
+  dither only near fog colour (sky and fog gradients), FogExp2 per biome,
+  gradient sky dome with sun glow, gradient-plane light shafts (additive,
+  depthWrite off), tiny additive particle sprites. Pixel ratio capped at 1.5.
